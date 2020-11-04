@@ -20,8 +20,8 @@ args <- list()
 args[["time_now"]] = "2014-02-15 12:00:00" #"2013-09-30 12:00:00"
 #args[["posi_lon"]] = NULL
 #args[["posi_lat"]] = NULL
-args[["attribs"]] = c("location_lat, tag_voltage, ground_speed")
-args[["time_dur"]] = 10
+args[["attribs"]] = "location_lat" #c("location_lat, tag_voltage, ground_speed")
+args[["time_dur"]] = NULL
 
 
 #################################################################

@@ -31,6 +31,9 @@
       {
         "name": "foreach"
       },
+	  {
+        "name": "sf"
+      },
 	        {
         "name": "ggplot2"
       },
