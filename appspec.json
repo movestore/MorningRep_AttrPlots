@@ -48,5 +48,38 @@
       }
     ]
   },
-  "createsArtifacts": true
+  "createsArtifacts": true,
+  "license": {
+    "key": "MIT"
+  },
+  "language": "eng",
+  "keywords": [
+    "morning report",
+    "pdf",
+    "multipage",
+    "attribute",
+    "plot"
+  ],
+  "people": [
+    {
+      "firstName": "Andrea",
+      "middleInitials": null,
+      "lastName": "Kölzsch",
+      "email": "akoelzsch@ab.mpg.de",
+      "roles": ["author", "creator"],
+      "orcid": "0000-0003-0193-1563",
+      "affiliation": "Max-Planck-Institute of Animal Behavior",
+      "affiliationRor": "https://ror.org/026stee22"
+    }
+  ],
+  "references": [
+    {
+      "type": "IsPartOf",
+      "note": "Morning Report, MoveApps Shiny App",
+      "url": "https://github.com/movestore/MorningReport/blob/master/README.md"
+    }
+  ],
+  "documentation" : {
+    "url": "https://github.com/movestore/MorningRep_AttrPlots/blob/master/README.md"
+  }
 }
