@@ -17,7 +17,7 @@
 	{
       "id": "attribs",
       "name": "Data attributes for plotting",
-      "description": "Provide the exact names of the data attributes that you want to plot, please separate them with a comma.",
+      "description": "Provide the exact names of the data attributes that you want to plot, please separate them with a comma. If unsure of the names, run the first App of your Workflow and see the Cargo Agent results (green button on the right) for the correct attribute name spelling.",
       "defaultValue": null,
       "type": "STRING"
 	}
