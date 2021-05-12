@@ -17,7 +17,7 @@ args <- list()
 #    args[["password"]] = "any-password"
 
 # Add your arguments of your r function here
-args[["time_now"]] = "2014-02-15 12:00:00" #"2013-09-30 12:00:00"
+args[["time_now"]] = "2014-02-15T12:00:00.000Z" #"2013-09-30T12:00:00.000Z"
 #args[["posi_lon"]] = NULL
 #args[["posi_lat"]] = NULL
 args[["attribs"]] = "location_lat" #c("location_lat, tag_voltage, ground_speed")
