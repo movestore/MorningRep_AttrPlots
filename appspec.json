@@ -16,8 +16,8 @@
     },
 	{
       "id": "attribs",
-      "name": "Data attributes for plotting",
-      "description": "Provide the exact names of the data attributes that you want to plot, please separate them with a comma. If unsure of the names, run the first App of your Workflow and see the Cargo Agent results (green button on the right) for the correct attribute name spelling.",
+      "name": "Data attributes to plot (max. of 5 attributes allowed)",
+      "description": "Provide the exact names of up to five data attributes that you want to plot (must be comma-separated!). If unsure of attribute names or spelling, please run the first App in your workflow and check the Variable Names in the Output Details overview. For definitions of Movebank attributes please refer to the Movebank Attribute Dictionary (https://www.movebank.org/cms/movebank-content/movebank-attribute-dictionary).",
       "defaultValue": null,
       "type": "STRING"
 	}
