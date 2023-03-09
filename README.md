@@ -18,19 +18,19 @@ moveStack in Movebank format
 ### Artefacts
 `MorningReport_attribPlots.pdf`: Artefact pdf with a multiple attribute plots on each page showing the time series of the selected attributes for one animal.
 
-### Parameters 
-`time_now`: reference timestamp towards which all analyses are performed. Generally (and by default) this is NOW, especially if in the field and looking for one or the other animal or wanting to make sure that it is still doing fine. When analysing older data sets, this parameter can be set to other timestamps so that the to be plotted data fall into a selected back-time window. 
+### Settings
+**Reference time (`time_now`):** reference timestamp towards which all analyses are performed. Generally (and by default) this is NOW, especially if in the field and looking for one or the other animal or wanting to make sure that it is still doing fine. When analysing older data sets, this parameter can be set to other timestamps so that the to be plotted data fall into a selected back-time window. 
 
-`time_dur`: time duration into the past that the attributes have to be plotted for. So, if the time duration is selected as 7 days then the x-axis ranges from the reference timestamp to 7 days before it. Unit: days
+**Track time duration. (`time_dur`):** time duration into the past that the attributes have to be plotted for. So, if the time duration is selected as 7 days then the x-axis ranges from the reference timestamp to 7 days before it. Unit: days
 
-`attribs`: the user has to provide the data attributes that shall be plotted for the defined time window. They have to be correctly spelled and comma-separated. Example: "tag_voltage, location_lat".
+**Data attributes to plot (max. of 5 attributes allowed) (`attribs`):** the user has to provide the data attributes that shall be plotted for the defined time window. They have to be correctly spelled and comma-separated. Example: "tag_voltage, location_lat".
 
 ### Null or error handling:
-**Parameter `time_now`:** If this parameter is left empty (NULL) the reference time is set to NOW. The present timestamp is extracted in UTC from the MoveApps server system.
+**Setting `time_now`:** If this parameter is left empty (NULL) the reference time is set to NOW. The present timestamp is extracted in UTC from the MoveApps server system.
 
-**Parameter `time_dur`:** If this parameter is left empty (NULL) then by default 10 days is used. A respective warning is given.
+**Setting `time_dur`:** If this parameter is left empty (NULL) then by default 10 days is used. A respective warning is given.
 
-**Parameter `attribs`:** If no attributes are defined (NULL) or none of the given attributes relate to any column names of the data set, then no pdf artefact is created. If more than 5 valid attributes are listed a warning is given, but the plotting is still done; the plots might be cut off on the pdf pages.
+**Setting `attribs`:** If no attributes are defined (NULL) or none of the given attributes relate to any column names of the data set, then no pdf artefact is created. If more than 5 valid attributes are listed a warning is given, but the plotting is still done; the plots might be cut off on the pdf pages.
 
 **Artefact:** If there are no locations of any animals in the defined time window, a warning is given and no pdf artefact created.
 
