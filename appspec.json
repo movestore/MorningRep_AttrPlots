@@ -17,7 +17,7 @@
 	{
       "id": "attribs",
       "name": "Data attributes to plot (max. of 5 attributes allowed)",
-      "description": "Provide the exact names of up to five data attributes that you want to plot (must be comma-separated!). If unsure of attribute names or spelling, please run the first App in your workflow and check the Variable Names in the Output Details overview. For definitions of Movebank attributes please refer to the Movebank Attribute Dictionary (https://www.movebank.org/cms/movebank-content/movebank-attribute-dictionary).",
+      "description": "Provide the exact names of up to five data attributes that you want to plot (must be comma-separated!). If unsure of attribute names or spelling, please run the first App in your workflow and check the Track Attributes in the Output Details overview. For definitions of Movebank attributes please refer to the Movebank Attribute Dictionary (https://www.movebank.org/cms/movebank-content/movebank-attribute-dictionary).",
       "defaultValue": null,
       "type": "STRING"
 	}
