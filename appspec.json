@@ -18,7 +18,7 @@
 	{
       "id": "attribs",
       "name": "Data attributes to plot",
-      "description": "Provide the exact names of the data attributes that you want to plot (must be comma-separated!). If unsure of attribute names or spelling, please run the first App in your workflow and check the 'track_attributes' in the 'App Output Details' (green 'i'). For definitions of Movebank attributes please refer to the Movebank Attribute Dictionary (https://www.movebank.org/cms/movebank-content/movebank-attribute-dictionary).",
+      "description": "Provide the exact names of the data attributes that you want to plot (must be comma-separated! and without quotes). If unsure of attribute names or spelling, please run the first App in your workflow and check the 'event_attributes' in the 'App Output Details' (green 'i'). For definitions of Movebank attributes please refer to the Movebank Attribute Dictionary (https://www.movebank.org/cms/movebank-content/movebank-attribute-dictionary).",
       "defaultValue": null,
       "type": "STRING"
 	}
