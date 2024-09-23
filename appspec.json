@@ -32,8 +32,7 @@
       {"name": "gridExtra"},
       {"name": "units"},
       {"name": "scales"},
-      {"name": "randomcoloR"},
-      {"name": "grid"}
+      {"name": "randomcoloR"}
     ]
   },
   "license": {
