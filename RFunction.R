@@ -16,6 +16,8 @@ library("grid")
 
 rFunction = function(time_now=NULL, attribs=NULL, time_dur=NULL, data) { 
   
+  Sys.setenv(tz="UTC")
+  
   if (is.null(attribs)) {
     logger.info("Warning! You did not provide any attribute names to be plotted. The function returns the input data set. No plots will be generated.")
   } else{
