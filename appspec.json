@@ -1,6 +1,7 @@
 {
+  "version": "1.2",
   "settings": [
-    {
+   {
       "id": "time_now",
       "name": "Reference time",
       "description": "Select a reference time towards which your data are evaluated. Default is NOW.",
@@ -9,46 +10,31 @@
     },
 	{
       "id": "time_dur",
-      "name": "Track time duration.",
-      "description": "Provide a time duration (in days) of how far in the past you want to plot your track(s).",
-      "defaultValue": null,
+      "name": "Track time duration (days).",
+      "description": "Provide a time duration (in days) of how far in the past you want to plot your track(s). Decimals(with '.') are allowed.",
+      "defaultValue": 10,
       "type": "DOUBLE"
     },
 	{
       "id": "attribs",
-      "name": "Data attributes to plot (max. of 5 attributes allowed)",
-      "description": "Provide the exact names of up to five data attributes that you want to plot (must be comma-separated!). If unsure of attribute names or spelling, please run the first App in your workflow and check the Track Attributes in the Output Details overview. For definitions of Movebank attributes please refer to the Movebank Attribute Dictionary (https://www.movebank.org/cms/movebank-content/movebank-attribute-dictionary).",
+      "name": "Data attributes to plot",
+      "description": "Provide the exact names of the data attributes that you want to plot (must be comma-separated! and without quotes). If unsure of attribute names or spelling, please run the first App in your workflow and check the 'event_attributes' in the 'App Output Details' (green 'i'). For definitions of Movebank attributes please refer to the Movebank Attribute Dictionary (https://www.movebank.org/cms/movebank-content/movebank-attribute-dictionary).",
       "defaultValue": null,
       "type": "STRING"
 	}
-    
   ],
   "dependencies": {
     "R": [
-      {
-        "name": "move"
-      },
-      {
-        "name": "foreach"
-      },
-	  {
-        "name": "sf"
-      },
-	        {
-        "name": "ggplot2"
-      },
-	        {
-        "name": "reshape2"
-      },
-	        {
-        "name": "grid"
-      },
-	        {
-        "name": "gridExtra"
-      }
+      {"name": "move2"},
+      {"name": "ggplot2"},
+      {"name": "dplyr"},
+      {"name": "reshape2"},
+      {"name": "gridExtra"},
+      {"name": "units"},
+      {"name": "scales"},
+      {"name": "randomcoloR"}
     ]
   },
-  "createsArtifacts": true,
   "license": {
     "key": "MIT"
   },
@@ -60,19 +46,26 @@
     "attribute",
     "plot"
   ],
-  "people": [
+ "people": [
     {
+      "firstName": "Anne",
+      "middleInitials": "K",
+      "lastName": "Scharf",  
+      "email": "ascharf@ab.mpg.de",
+      "roles": ["author", "creator"],
+      "orcid": "0000-0002-3357-8533",
+      "affiliation": "Max-Planck-Institute of Animal Behavior",
+      "affiliationRor": "https://ror.org/026stee22"
+},
+{
       "firstName": "Andrea",
       "middleInitials": null,
       "lastName": "Kölzsch",
       "email": "akoelzsch@ab.mpg.de",
-      "roles": ["author", "creator"],
+      "roles": ["contributor"],
       "orcid": "0000-0003-0193-1563",
       "affiliation": "Max-Planck-Institute of Animal Behavior",
       "affiliationRor": "https://ror.org/026stee22"
     }
-  ],
-  "documentation" : {
-    "url": "https://github.com/movestore/MorningRep_AttrPlots/blob/master/README.md"
-  }
+  ]
 }
