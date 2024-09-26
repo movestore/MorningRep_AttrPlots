@@ -14,7 +14,7 @@ A multipage PDF is created of user-defined data attributes across time. The plot
 This App was developed for any taxonomic group. 
 
 #### Required data properties
-The App should work for any kind of (location) data.
+The App should work for any kind of (location) data. Specially useful for live feed data.
 
 ### Input type
 `move2::move2_loc`
