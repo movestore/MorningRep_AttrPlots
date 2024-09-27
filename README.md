@@ -30,7 +30,7 @@ The App should work for any kind of (location) data. Specially useful for live f
 
 **Track time duration. (`time_dur`):** time duration into the past that the track has to be plotted for. So, if the time duration is selected as 5 days then the plotted track consists of all location from the reference timestamp to 5 days before it. Values can be also decimals, e.g. 0.25 for the last 6 hours. Unit: days
 
-**Data attributes to plot (max. of 5 attributes allowed) (`attribs`):** the user has to provide the data attributes that shall be plotted for the defined time window. The exact names of the data attributes must be comma-separated! and without quotes. If unsure of attribute names or spelling, please run the previous App in your workflow and check the `event_attributes` in the `App Output Details` (green 'i'). For definitions of Movebank attributes please refer to the Movebank Attribute Dictionary (https://www.movebank.org/cms/movebank-content/movebank-attribute-dictionary). Example: barometric_pressure, gps_satellite_count.
+**Data attributes to plot (`attribs`):** the user has to provide the data attributes that shall be plotted for the defined time window. The exact names of the data attributes must be comma-separated! and without quotes. If unsure of attribute names or spelling, please run the previous App in your workflow and check the `event_attributes` in the `App Output Details` (green 'i'). For definitions of Movebank attributes please refer to the Movebank Attribute Dictionary (https://www.movebank.org/cms/movebank-content/movebank-attribute-dictionary). Example: barometric_pressure, gps_satellite_count.
 
 
 ### Changes in output data
