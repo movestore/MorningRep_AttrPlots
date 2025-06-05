@@ -53,7 +53,7 @@ rFunction = function(time_now=NULL, attribs=NULL, time_dur=NULL, data) {
         dataPlotTr <- split(dataPlot, mt_track_id(dataPlot))
         ggall <- lapply(dataPlotTr, function(trk){
           trk_df <- data.frame(timestamps=mt_time(trk),as.data.frame(trk)[,attribs_ok])
-          # trk_df$dummy <- NA
+          names(trk_df) <- c("timestamps", attribs_ok)
           ggtrk <- lapply(seq_along(attribs_ok), function(x){
             atr <- attribs_ok[x]
             clr <- colspt[x]
