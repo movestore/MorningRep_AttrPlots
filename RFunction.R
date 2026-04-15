@@ -51,6 +51,21 @@ rFunction = function(time_now=NULL, attribs=NULL, time_dur=NULL, data) {
         if(n < 10){colspt <- brewer_pal(palette = "Set1")(n)}else{colspt <- distinctColorPalette(n)}
         
         dataPlotTr <- split(dataPlot, mt_track_id(dataPlot))
+        ## plot attr for all tracks in one plot
+        alltrk_df <- data.frame(timestamps=mt_time(dataPlot),trackID=mt_track_id(dataPlot),as.data.frame(dataPlot)[,attribs_ok])
+        names(alltrk_df) <- c("timestamps","trackID", attribs_ok)
+        ggtrk_all <- lapply(seq_along(attribs_ok), function(x){
+          atr <- attribs_ok[x]
+          # clr <- colspt[x]
+          ggplot(alltrk_df) +
+            geom_line(aes(x = timestamps , y = !!sym(atr), color=trackID), show.legend=T) + 
+            # facet_grid( ~ dummy, labeller=labeller(dummy=atr))+
+            ggtitle(atr)+
+            xlab("")+ylab("")+
+            theme_bw()
+        })
+        ggtrkpg_all <- grid.arrange(grobs=ggtrk_all,ncol=1,top = textGrob(paste("All tracks")))
+        ## make plot per attr and track
         ggall <- lapply(dataPlotTr, function(trk){
           trk_df <- data.frame(timestamps=mt_time(trk),as.data.frame(trk)[,attribs_ok])
           names(trk_df) <- c("timestamps", attribs_ok)
@@ -73,8 +88,15 @@ rFunction = function(time_now=NULL, attribs=NULL, time_dur=NULL, data) {
           return(ggtrkpg)
         })
         if(len>5){logger.info("Warning! You have selected more than 5 valid attributes to plot. This might lead to very small plots.")}
-        gp  <- marrangeGrob(ggall, nrow = 1, ncol = 1)
-        ggsave(file=appArtifactPath("MorningReport_attribPlots.pdf"), plot = gp, width = 21, height = 29.7, units = "cm")
+         all_pages <- c(list(ggtrkpg_all), ggall)
+         gp  <- marrangeGrob(grobs=all_pages, nrow = 1, ncol = 1)
+        if(len==1){
+          ggsave(file=appArtifactPath("MorningReport_attribPlots.pdf"), plot = gp, width = 30, height = 15 , units = "cm")
+          
+        }else{
+          ggsave(file=appArtifactPath("MorningReport_attribPlots.pdf"), plot = gp, width = 21, height = 29.7, units = "cm")
+          
+        }
       }
     }else{logger.info("None of the individuals have data in the requested time window. Thus, no pdf artefact is generated.")}
   }

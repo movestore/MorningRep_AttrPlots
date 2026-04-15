@@ -23,7 +23,7 @@ The App should work for any kind of (location) data. Specially useful for live f
 `move2::move2_loc`
 
 ### Artefacts
-`MorningReport_attribPlots.pdf`: PDF with attribute plots per track on each page, showing the time series of the selected attributes for each track.
+`MorningReport_attribPlots.pdf`: PDF with attribute plots per track on each page, showing the time series of the selected attributes for each track. At the top of the page there will be one plot per attribute containing all tracks to make comparisons easier.
 
 ### Settings 
 **Reference time (`time_now`):** reference timestamp towards which all analyses are performed. Generally (and by default) this is NOW, especially if in the field and looking for one or the other animal or wanting to make sure that it is still doing fine. When analysing older data sets, this parameter can be set to other timestamps so that the to be plotted data fall into a selected back-time window. 
